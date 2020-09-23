@@ -11,11 +11,13 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            int a = 3, b = 5;
+            WPCSharp.DesignPatterns.Creational.Builder.Client.Execute();
 
-            Square shape = new Rectangle() {A = a, B = b };
+            //int a = 3, b = 5;
 
-            Console.WriteLine($"Rectangle (a: {a}, b: {b}) area: {shape.Area}");
+            //Square shape = new Rectangle() {A = a, B = b };
+
+            //Console.WriteLine($"Rectangle (a: {a}, b: {b}) area: {shape.Area}");
             Console.ReadKey();
         }
     }

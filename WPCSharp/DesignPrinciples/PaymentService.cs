@@ -8,28 +8,19 @@ namespace WPCSharp.DesignPrinciples
 {
     public class PaymentService
     {
-        private ICollection<PaymentAccount> PaymentAccounts { get; } = new List<PaymentAccount> { new PaymentAccount(1), new PaymentAccount(2) };
-
-        public PaymentAccount FindPaymentAccount(int id)
+        public bool Charge(Customer customer, float amount)
         {
-            return PaymentAccounts.SingleOrDefault(x => x.Id == id);
-        }
-
-        public bool Charge(int paymentAccountId, float amount)
-        {
-            var paymentAccount = FindPaymentAccount(paymentAccountId);
-            if (paymentAccount == null)
+            if (customer.PaymentAccount == null)
                 return false;
 
-            return paymentAccount.Charge(amount);
+            return customer.PaymentAccount.Charge(amount);
         }
 
-        public void Fund(int paymentAccountId, float amount)
+        public void Fund(Customer customer, float amount)
         {
-            var paymentAccount = FindPaymentAccount(paymentAccountId);
-            if (paymentAccount == null)
+            if (customer.PaymentAccount == null)
                 return;
-            paymentAccount.Fund(amount);
+            customer.PaymentAccount.Fund(amount);
         }
     }
 }

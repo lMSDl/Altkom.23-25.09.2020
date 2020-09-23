@@ -49,6 +49,12 @@
     <Compile Include="DesignPrinciples\PaymentService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SOLID\III_LiskovSubstitusion_2.cs" />
+    <Compile Include="SOLID\III_LiskovSubstitusion_1.cs" />
+    <Compile Include="SOLID\II_OpenClose.cs" />
+    <Compile Include="SOLID\IV_InterfaceSegregation.cs" />
+    <Compile Include="SOLID\I_SingleResponsibility.cs" />
+    <Compile Include="SOLID\V_DependencyInversion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

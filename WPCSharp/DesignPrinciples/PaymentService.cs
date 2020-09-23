@@ -15,12 +15,23 @@ namespace WPCSharp.DesignPrinciples
             return PaymentAccounts.Remove(param);
         }
 
+        public PaymentAccount FindPaymentAccountByAllowedDebit(float allowedDebit)
+        {
+            return PaymentAccounts.SingleOrDefault(x => x.AllowedDebit == allowedDebit);
+        }
+
+        public PaymentAccount FindPaymentAccount(int id)
+        {
+            return PaymentAccounts.SingleOrDefault(x => x.Id == id);
+        }
+
         public bool Charge(int paymentAccountId, float amonut)
         {
-            var paymentAccount = PaymentAccounts.SingleOrDefault(x => x.Id == paymentAccountId);
+            var paymentAccount = FindPaymentAccount(paymentAccountId);
             if (paymentAccount == null)
                 return false;
-            if (paymentAccount.Incomes - paymentAccount.Outcomes + paymentAccount.AllowedDebit < amonut)
+
+            if (GetBalance(paymentAccountId) + paymentAccount.AllowedDebit < amonut)
                 return false;
 
             paymentAccount.Outcomes += amonut;
@@ -29,7 +40,7 @@ namespace WPCSharp.DesignPrinciples
 
         public void Fund(int paymentAccountId, float amonut)
         {
-            var paymentAccount = PaymentAccounts.SingleOrDefault(x => x.Id == paymentAccountId);
+            var paymentAccount = FindPaymentAccount(paymentAccountId);
             if (paymentAccount == null)
                 return;
             paymentAccount.Incomes += amonut;
@@ -37,8 +48,8 @@ namespace WPCSharp.DesignPrinciples
         
         public float? GetBalance(int paymentAccountId)
         {
-            var customer = PaymentAccounts.Where(x => x.Id == paymentAccountId).SingleOrDefault();
-            return customer?.Incomes - customer?.Outcomes;
+            var paymentAccount = FindPaymentAccount(paymentAccountId);
+            return paymentAccount?.Incomes - paymentAccount?.Outcomes;
         }
     }
 }

@@ -18,8 +18,6 @@ namespace WPCSharp.DesignPrinciples
         {
             Id = id;
         }
-
-        public bool HasDebit => Incomes - Outcomes < 0;
     }
 
 }

@@ -15,31 +15,21 @@ namespace WPCSharp.DesignPrinciples
             return PaymentAccounts.SingleOrDefault(x => x.Id == id);
         }
 
-        public bool Charge(int paymentAccountId, float amonut)
+        public bool Charge(int paymentAccountId, float amount)
         {
             var paymentAccount = FindPaymentAccount(paymentAccountId);
             if (paymentAccount == null)
                 return false;
 
-            if (GetBalance(paymentAccountId) + paymentAccount.AllowedDebit < amonut)
-                return false;
-
-            paymentAccount.Outcomes += amonut;
-            return true;
+            return paymentAccount.Charge(amount);
         }
 
-        public void Fund(int paymentAccountId, float amonut)
+        public void Fund(int paymentAccountId, float amount)
         {
             var paymentAccount = FindPaymentAccount(paymentAccountId);
             if (paymentAccount == null)
                 return;
-            paymentAccount.Incomes += amonut;
-        }
-        
-        public float? GetBalance(int paymentAccountId)
-        {
-            var paymentAccount = FindPaymentAccount(paymentAccountId);
-            return paymentAccount?.Incomes - paymentAccount?.Outcomes;
+            paymentAccount.Fund(amount);
         }
     }
 }

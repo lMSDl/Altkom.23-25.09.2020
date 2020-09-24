@@ -11,7 +11,7 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            WPCSharp.DesignPatterns.Structural.Proxy.Client.Execute();
+            WPCSharp.DesignPatterns.Behavioral.ChainOfResponsibility.II.Client.Execute();
 
             //int a = 3, b = 5;
 

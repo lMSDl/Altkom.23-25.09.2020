@@ -11,7 +11,7 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            WPCSharp.DesignPatterns.Structural.Adapter.II.Client.Execute();
+            WPCSharp.DesignPatterns.Structural.Bridge.II.Client.Execute();
 
             //int a = 3, b = 5;
 

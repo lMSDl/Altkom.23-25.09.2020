@@ -107,6 +107,17 @@
     <Compile Include="DesignPatterns\Structural\Decorator\Notification.cs" />
     <Compile Include="DesignPatterns\Structural\Decorator\EmailNotification.cs" />
     <Compile Include="DesignPatterns\Structural\Decorator\SmsNotification.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade\III\ConverterFacade.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade\III\IByteArrayConveter.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade\III\IJsonCoverter.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade\III\IXmlConverter.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade\II\ICartService.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade\II\IPaymentService.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade\II\IProductService.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade\II\OrderFacade.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade\I\Client.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade\I\JsonConvertFacade.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade\I\Person.cs" />
     <Compile Include="DesignPrinciples\Customer.cs" />
     <Compile Include="DesignPrinciples\CustomersServices.cs" />
     <Compile Include="DesignPrinciples\PaymentAccount.cs" />

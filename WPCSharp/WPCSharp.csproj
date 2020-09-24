@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -62,6 +64,9 @@
     <Compile Include="DesignPatterns\Behavioral\Command\CommandsInvoker.cs" />
     <Compile Include="DesignPatterns\Behavioral\Command\Garden.cs" />
     <Compile Include="DesignPatterns\Behavioral\Command\ICommand.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Iterator\Buffer.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Iterator\BufferInterator.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Iterator\Client.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Client.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Factories.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Interfaces.cs" />

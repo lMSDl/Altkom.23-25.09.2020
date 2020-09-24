@@ -11,7 +11,7 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            WPCSharp.DesignPatterns.Behavioral.Command.Client.Execute();
+            WPCSharp.DesignPatterns.Behavioral.Iterator.Client.Execute();
 
             //int a = 3, b = 5;
 

@@ -11,7 +11,7 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            WPCSharp.DesignPatterns.Structural.Bridge.II.Client.Execute();
+            WPCSharp.DesignPatterns.Structural.Composite.Client.Execute();
 
             //int a = 3, b = 5;
 
@@ -19,6 +19,7 @@ namespace WPCSharp
 
             //Console.WriteLine($"Rectangle (a: {a}, b: {b}) area: {shape.Area}");
             Console.ReadKey();
+
         }
     }
 }

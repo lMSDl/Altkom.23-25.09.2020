@@ -11,7 +11,7 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            WPCSharp.DesignPatterns.Structural.Composite.Client.Execute();
+            WPCSharp.DesignPatterns.Structural.Decorator.Client.Execute();
 
             //int a = 3, b = 5;
 

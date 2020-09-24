@@ -11,7 +11,7 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            WPCSharp.DesignPatterns.Creational.Prototype.Client.Execute();
+            WPCSharp.DesignPatterns.Creational.Singleton.Client.Execute();
 
             //int a = 3, b = 5;
 

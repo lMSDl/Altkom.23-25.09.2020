@@ -11,7 +11,7 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            WPCSharp.DesignPatterns.Behavioral.Mediator.Client.Execute();
+            WPCSharp.DesignPatterns.Behavioral.Memento.Client.Execute();
 
             //int a = 3, b = 5;
 

@@ -13,13 +13,17 @@ namespace WPCSharp
         {
             WPCSharp.DesignPatterns.Behavioral.TemplateMethod.Client.Execute();
 
-            //int a = 3, b = 5;
-
-            //Square shape = new Rectangle() {A = a, B = b };
-
-            //Console.WriteLine($"Rectangle (a: {a}, b: {b}) area: {shape.Area}");
             Console.ReadKey();
 
+        }
+
+        private static void Test()
+        {
+            int a = 3, b = 5;
+
+            Square shape = new Rectangle() { A = a, B = b };
+
+            Console.WriteLine($"Rectangle (a: {a}, b: {b}) area: {shape.Area}");
         }
     }
 }

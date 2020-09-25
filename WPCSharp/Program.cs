@@ -11,7 +11,7 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            WPCSharp.DesignPatterns.Behavioral.TemplateMethod.Client.Execute();
+            WPCSharp.DesignPatterns.Behavioral.Visitor.II.Client.Execute();
 
             Console.ReadKey();
 
@@ -19,6 +19,8 @@ namespace WPCSharp
 
         private static void Test()
         {
+
+
             int a = 3, b = 5;
 
             Square shape = new Rectangle() { A = a, B = b };
